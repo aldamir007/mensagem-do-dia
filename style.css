@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #f8fafc;
+    background:
+        radial-gradient(circle at top left, #263c5a 0, transparent 40%),
+        linear-gradient(135deg, #0b1120, #172033 55%, #111827);
+}
+
+main {
+    padding: 30px 16px;
+}
+
+.mensagem-card {
+    width: 100%;
+    max-width: 680px;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.97);
+    color: #1e293b;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3) !important;
+    overflow: hidden;
+    animation: aparecer 0.7s ease;
+}
+
+.mensagem-card .card-body {
+    padding: 48px !important;
+}
+
+.icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px !important;
+    border-radius: 20px;
+    background: #fef3c7;
+    color: #b7791f;
+    font-size: 34px;
+}
+
+.subtitulo {
+    color: #b7791f;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+h1 {
+    color: #111827;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px !important;
+}
+
+.linha {
+    width: 65px;
+    height: 5px;
+    margin: 0 auto 30px;
+    background: linear-gradient(90deg, #b7791f, #f5cf70);
+    border-radius: 20px;
+}
+
+.frase {
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.autor {
+    color: #a16b13;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.btn-mensagem {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 13px;
+    background: #172033;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.btn-mensagem:hover {
+    background: #d4a72c;
+    color: #111827;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(183, 121, 31, 0.2);
+}
+
+.btn-mensagem:active {
+    transform: translateY(0);
+}
+
+.rodape {
+    color: #94a3b8;
+    font-size: 0.82rem;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    .mensagem-card .card-body {
+        padding: 30px 22px !important;
+    }
+
+    h1 {
+        font-size: 2.2rem !important;
+        letter-spacing: -1px;
+    }
+
+    .frase {
+        font-size: 1.12rem;
+    }
+
+    .subtitulo {
+        letter-spacing: 2px;
+    }
+}
